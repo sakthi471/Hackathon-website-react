@@ -6,12 +6,12 @@ const Hero = () => {
   
   return (
     <div className=" relative mx-auto w-full h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center px-5 py-8 pl-8 h-[400px]"> 
+      <div className="flex flex-col items-center px-5 py-8 pl-8 h-[350px]"> 
         <div className="w-4 rounded-full h-4 bg-violet-600 z-10 "></div>
         <div className=" w-1 h-[250px] violet-gradient rounded-tr-full  rounded-tl-full "></div>
       </div>
 
-      <div className="px-4 py-7 flex flex-col items-center gap-4 h-[400px]">
+      <div className="px-4 py-7 flex flex-col items-center gap-4 h-[300px]">
         <p>NIT-K, NIT-W & NIT-T welcomes you to</p>
         <h2 className="text-5xl font-bold ">
           <span className=" text-violet-500">TCE-MDU</span> Hackathon
