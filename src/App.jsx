@@ -1,29 +1,22 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Tracks from "./components/Tracks";
-import Statistics from "./components/Statistics";
-import Timeline from "./components/Timeline";
-import Sponers from "./components/Sponers";
-import Register from "./components/Register";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 import Universe from "./components/Universe";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+
 
 const App = () => {
   return (
-    <div className=" w-full bg-primary min-h-screen ">
-      <div className="bg-hero-pattern bg-cover">
-        <Navbar/>
-        <Hero/>
-      </div>
-      <About/>
-      <Tracks/>
-      <Statistics/>
-      <Timeline/>
-      <Sponers/>
-      <Universe/>
-      <Register/>
 
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Universe />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 };
 

@@ -4,22 +4,24 @@ import Register from "./Register";
 
 const Universe = () => {
   return (
-    <div className=" w-full min-h-screen py-10 relative">
-      <div className="py-4 relative w-full h-screen">
-        {/* <ReactNebula
+    <div className=" w-full h-screen  relative  ">
+       
+      <div className=" relative w-full h-full">
+        <ReactNebula
           config={{
-            starsCount: 50,
+            starsCount: 300,
             starsRotationSpeed: 0.5,
-            nebulasIntensity: 10,
-            cometFrequence: 100,
-            sunScale: 0,
+            nebulasIntensity: 20,
+            cometFrequence: 200,
+            sunScale: 2,
             solarSystemSpeedOrbit: 10,
-            planetsScale: 0,
+            planetsScale: 2,
           }}
-        /> */}
+        />
+        
       </div>
-      <div className=" z-30 absolute top-28 left-36 bg-[#151030] p-5">
-           universe
+      <div className=" absolute w-[80%] top-7 left-[200px]">
+            <Register/>
       </div>
     </div>
   );

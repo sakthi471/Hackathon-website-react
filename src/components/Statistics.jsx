@@ -27,11 +27,11 @@ const Statistics = () => {
   ];
 
   return (
-    <div className="w-full h-screen flex flex-col items-center">
-      <p className="text-3xl font-bold py-6 "> Statistics</p>
-         <div className="flex gap-10 flex-wrap w-[60%] justify-center  items-center">
+    <div className="w-full  flex flex-col items-center  py-14">
+      <p className="text-3xl font-bold py-7 "> Statistics</p>
+         <div className="flex gap-10 flex-wrap w-[90%] justify-center  items-center">
          {statistic.map(({ id, title, value }) => (
-        <div   key ={id}className=" w-[300px] h-[250px] stastic-gradinet rounded-md flex flex-col items-center  justify-center">
+        <div   key ={id}className=" w-[330px] h-[250px] stastic-gradinet rounded-md flex flex-col items-center  justify-center">
           <h1 className="font-bold text-2xl"> {title}</h1>
           <h3 className="font-bold text-3xl">
             <CountUp
