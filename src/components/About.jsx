@@ -2,7 +2,7 @@ import React from "react";
 import tceLogo from '/tcelogo.svg'
 const About = () => {
   return (
-    <div className="flex justify-center items-center flex-col w-full py-10 xl:h-screen">
+    <div name="about" className="flex justify-center items-center flex-col w-full py-10 xl:h-screen">
         <h3 className=" font-bold text-3xl py-6  xl:text-4xl ">About</h3> 
       <div className="w-[90%]  relative liner-border p-[2px] rounded-[15px] 2xl:w-[80%]">
         <div className=" h-full text-justify w-full text-gray-200 bg-tertiary rounded-[15px] shadow-card px-8 py-7 flex flex-col items-center  gap-6 justify-evenly lg:py-9 xl:h-[500px] xl:text-lg xl:pt-10 2xl:text-lg">

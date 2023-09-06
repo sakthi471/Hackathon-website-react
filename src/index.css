@@ -12,61 +12,105 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
-
-.glass{
-  background: rgba( 5, 8, 22, 0.25 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
-
-
+ 
+.drop-bg-blue-500{
+      filter: drop-shadow(1px 3px 10px rgba(245, 249, 251, 0.5) );
+    
+      
 }
- .navGlass{
-  background: rgba( 21, 16, 48, 0.95 );
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
-  
+
+
+.box {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(from var(--border-angle), rgb(124 58 237), rgb(124 58 237) 50%, rgb(124 58 237)), conic-gradient(from var(--border-angle), transparent 20%, #078ff1 , rgb(248, 172, 8));
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 6s linear infinite;
+}
+@keyframes bg-spin {
+  to {  
+    --border-angle: 1turn;
  }
-
-.formglass{
-  background: rgba( 21, 16, 48, 0.35 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 5px );
--webkit-backdrop-filter: blur( 5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.formInputGlass{background: rgba( 255, 255, 255, 0.15 );
-  backdrop-filter: blur( 5px );
-  -webkit-backdrop-filter: blur( 5px );
+.box:hover {
+  animation-play-state: paused;
+  
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+
+ 
+.footerGradient {
+  background: rgba(21, 16, 48, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 3px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass {
+  background: rgba(5, 8, 22, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.navGlass {
+  background: rgba(21, 16, 48, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.formglass {
+  background: rgba(21, 16, 48, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.formInputGlass:focus{
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-
+.formInputGlass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.formSubmissionGlass{background: rgba( 255, 255, 255, 0.15 );
+.formInputGlass:focus {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.formSubmissionGlass {
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(123, 2, 81, 0.3);
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(123, 2, 81, 0.3);
 }
 
-.btnGlass{
-  background: rgba( 124, 58, 237, 0.5 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+.statisticsGlass {
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.btnGlass {
+  background: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .pink-gra {
-  background: linear-gradient(
-    to top,
-    #ec008c,
-    #fc6767
-  );
+  background: linear-gradient(to top, #ec008c, #fc6767);
 }
 
 .hash-span {
@@ -75,10 +119,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   display: block;
 }
 
-.stastic-gradinet{
+.stastic-gradinet {
   background: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
 }
-
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
@@ -110,7 +153,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
-.liner-border{
+.liner-border {
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import vite from '/vite.svg'
 import { HiMenuAlt3 } from 'react-icons/hi'
 import { FaTimes } from 'react-icons/fa'
+import { Link, animateScroll as scroll } from "react-scroll";
+
 const Navbar = () => {
 
   const [nav, setNav] = useState(false)
@@ -10,17 +12,17 @@ const Navbar = () => {
     {
       id: 1,
       title: 'home',
-      url: '/'
+      url: 'home'
     },
     {
       id: 2,
       title: 'about',
-      url: '/'
+      url: 'about'
     },
     {
       id: 3,
       title: 'tracks',
-      url: '/'
+      url: 'tracks'
     },
     {
       id: 4,
@@ -30,20 +32,25 @@ const Navbar = () => {
 
     {
       id: 5,
-      title: 'sponers',
-      url: '/'
+      title: 'sponsors',
+      url: 'sponsors'
     },
 
     {
       id: 6,
       title: 'faq',
-      url: '/'
+      url: 'faq'
     },
 
     {
       id: 7,
       title: 'contact',
-      url: '/'
+      url: 'contact'
+    },
+    {
+      id: 8,
+      title: 'statistics',
+      url: 'statistics'
     },
   ]
 
@@ -52,16 +59,20 @@ const Navbar = () => {
     <nav className='glass w-full flex items-center justify-between p-4 fixed z-20'>
       <div className='font-bold px-2 flex items-center gap-3 text-xl'>
         <img src={vite} className=' w-7' alt="vite logo" />
-        Sudo
+        TCE-MDU
       </div>
       <div className='flex items-center  justify-evenly'>
 
         <div className=' hidden lg:flex'>
-        {
-        Navlinks.map((navitem) => (
-          <li key={navitem.id} className=' list-none px-3 py-4 capitalize text-gray-300 cursor-pointer  hover:text-gray-100 hover:font-semibold' >{navitem.title}</li>
-        ))
-      }
+          {
+            Navlinks.map(({id,title,url}) => (
+              <li key={id} className=' list-none px-3 py-4 capitalize text-gray-300 cursor-pointer  hover:text-gray-100 hover:font-semibold' > 
+               <Link  to={url} smooth={true} duration={500} offset={-50} > { title}</Link>
+                 
+               </li>
+               
+            ))
+          }
         </div>
 
         <div onClick={() => setNav(!nav)} className=' text-2xl p-3 font-bold lg:hidden'>
@@ -70,18 +81,18 @@ const Navbar = () => {
 
       </div>
 
-     {
-      nav &&  <div className='w-full flex flex-col h-screen text-xl font-semibold gap-5 py-10 items-center absolute navGlass top-[75px] left-0  '>
       {
-        Navlinks.map((navitem) => (
-          <li key={navitem.id} onClick={ ()=>setNav(!nav)} className=' list-none px-3 py-2 capitalize text-gray-100 cursor-pointer  hoverz:text-gray-100 hover:font-semibold' >{navitem.title}</li>
-        ))
+        nav && <div className='w-full flex flex-col h-screen text-xl font-semibold gap-5 py-10 items-center absolute navGlass top-[75px] left-0  '>
+          {
+            Navlinks.map((navitem) => (
+              <li key={navitem.id} onClick={() => setNav(!nav)} className=' list-none px-3 py-2 capitalize text-gray-100 cursor-pointer  hoverz:text-gray-100 hover:font-semibold' >{navitem.title}</li>
+            ))
+          }
+        </div>
       }
-    </div>
-     }
 
 
-     
+
     </nav>
   )
 }

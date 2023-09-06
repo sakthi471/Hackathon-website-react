@@ -39,7 +39,7 @@ const Tracks = () => {
     },
   ]
   return (
-    <div className="w-full px-5  flex flex-col items-center py-5">
+    <div name="tracks" className="w-full px-5  flex flex-col items-center py-5">
       <h2 className="font-bold text-3xl py-7 xl:py-10  ">Tracks</h2>
       <div className="p-4 flex gap-11 w-full flex-wrap items-center justify-center xl:gap-40 2xl:gap-14  ">
         {
