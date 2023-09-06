@@ -8,6 +8,7 @@ import facebook from '../assets/social links/logos_facebook.033e12c.png'
 import telegram from '../assets/social links/telegram.54a7e64.png'
 import twitter from '../assets/social links/Twitter.0879e74.png'
 import discord from '../assets/social links/discord.8faa07b.png'
+
 const Contact = () => {
     
   const socialLinks=[
@@ -49,7 +50,7 @@ const Contact = () => {
 
   return (
     <div  name="contact" className='w-full min-h-[300px] flex  items-center justify-center footerGradient'>
-      <div className='w-full flex flex-col justify-evenly  gap-14 px-10 py-9 md:w-[60%] lg:flex-row lg:px-2 lg:w-full lg:px-7  l xl:flex-row xl:justify-evenly xl:w-full '>
+      <div className='w-full flex flex-col justify-evenly  gap-14 px-10 py-9 md:w-[60%] lg:flex-row lg:px-2 lg:w-full  xl:flex-row xl:justify-evenly xl:w-full '>
         <div className='flex flex-col gap-5 '>
           <p className=' text-xl capitalize font-bold border-blue-400 border-b-2 w-[150px]'>contact us</p>
           <div className='flex flex-col gap-2' > 
