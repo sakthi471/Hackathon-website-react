@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@flodlc/nebula": "^1.0.56",
+    "axios": "^1.5.0",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
-    "react-axios": "^2.0.6",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",

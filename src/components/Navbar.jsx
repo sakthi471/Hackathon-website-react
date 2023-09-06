@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
         <div onClick={() => setNav(!nav)} className=' text-2xl p-3 font-bold lg:hidden'>
-          {nav ? <FaTimes /> : <HiMenuAlt3 className='  font-normal' />}
+          {nav ? <FaTimes /> : <HiMenuAlt3 className=' font-thin' />}
         </div>
 
       </div>

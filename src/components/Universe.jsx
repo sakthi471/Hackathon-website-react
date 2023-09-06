@@ -4,7 +4,7 @@ import Register from "./Register";
 
 const Universe = () => {
   return (
-    <div className=" w-full h-screen  relative  ">
+    <div className=" w-full h-[1000px] relative ">
        
       <div className=" relative w-full h-full">
         <ReactNebula
@@ -20,7 +20,7 @@ const Universe = () => {
         />
         
       </div>
-      <div className=" absolute w-[80%] top-7 left-[200px]">
+      <div className=" absolute w-[100%] md:w-[70%] lg:w-[60%] top-[50%] xl:w-[45%] 2xl:w-[40%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
             <Register/>
       </div>
     </div>

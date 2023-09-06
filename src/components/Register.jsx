@@ -1,26 +1,23 @@
 import React, { useState } from "react";
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-
+import axios from 'axios'
 
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
+import RegisterRes from "./RegisterRes";
 
 const Register = () => {
   let [page, setPage] = useState(0);
-  const limit = 3;
+  const [status,setStatus]=useState(null)
+  const [message,setMessage]=useState("")
+
+  const limit = 4;
+  
 
 
 
-  const handlePrev = () => {
-    if (page <= 0) {
-      setPage(0)
-    }
-    else {
-      setPage(page--)
-    }
-  }
 
 
   const [input, setInput] = useState({
@@ -52,10 +49,19 @@ const Register = () => {
   }
 
   const hadleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(input);
+    try {
+      e.preventDefault()
+      const res = await axios.post("https://web-it-like-spider.onrender.com/hackathon/register/", input)
+      console.log(res.status,res.data);
+      setStatus(res.status)
+    }
 
+    catch (e) {
+      console.log(e.message);
+      setStatus(400)
+    }
   }
+
 
 
 
@@ -68,7 +74,8 @@ const Register = () => {
         return <StepTwo inputHandler={inputHandler} input={input} />
       case 2:
         return <StepThree inputHandler={inputHandler} input={input} />
-
+      case 3:
+        return <RegisterRes status={status} page={page}  setPage={setPage} />
       default:
         return null;
     }
@@ -77,28 +84,34 @@ const Register = () => {
 
   return (
     <div className="w-full h-screen  flex flex-col gap-5   justify-center items-center ">
-      <h1 className=" font-semibold text-2xl">Register</h1>
-      <div className="w-[60%]  formglass flex flex-col items-center rounded-md gap-7 py-7 justify-around ">
-        <div className="flex  items-center gap-6 text-lg font-semibold">
+      <h1 className=" font-semibold text-xl">Register</h1>
+      <div className="w-[95%]  formglass flex flex-col items-center rounded-md gap-7 py-7 justify-around ">
+        {
+          page !==3 ? (  <div className="flex  items-center gap-6 text-base font-semibold">
           <p>Memeber</p>
           <div className=" w-10 h-10 rounded-[50px] flex items-center justify-center font-bold text-white bg-primary">
             {page + 1}
           </div>
           <div>Details</div>
-        </div>
+        </div>):null
+        }
         {
           renderComponen()
         }
-        <div className="w-[50%] flex justify-between items-center">
-          <button style={page === 0 ? { visibility: 'hidden' } : {}} className=" flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass" onClick={() => page<=0? setPage(0):setPage(page-=1)}><AiOutlineArrowLeft /> Back  </button >
+         {
+          page!==3 ? ( <div className="w-[90%] flex justify-between items-center">
+          <button style={page === 0 ? { visibility: 'hidden' } : {}} className=" flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass" onClick={() => page <= 0 ? setPage(0) : setPage(page -= 1)}><AiOutlineArrowLeft /> Back  </button >
 
           {
-            page === 2 ? (<button onClick={(e) => hadleSubmit(e)} className="flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px]  btnGlass " >Submit</button>) : (
-              <button className="flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass " onClick={() => page >= 2 ? setPage(limit - 1) : setPage(page += 1)} >Next <AiOutlineArrowRight /> </button>)
+            page === 2 ? (<button onClick={(e) => {
+              hadleSubmit(e); page >= 3 ? setPage(limit - 1) : setPage(page += 1)
+            }} className="flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px]  btnGlass " >Submit</button>) : (
+              <button className="flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass " onClick={() => page >= 3 ? setPage(limit - 1) : setPage(page += 1)} >Next <AiOutlineArrowRight /> </button>)
           }
 
 
-        </div>
+        </div>) :null
+         }
       </div>
     </div>
   );

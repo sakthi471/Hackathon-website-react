@@ -3,7 +3,7 @@ import React from 'react'
 const StepThree = ( {inputHandler,input}) => {
   return (
 
-    <div className="flex w-[50%]">
+    <div className="flex w-full px-5">
       <form className="w-full flex flex-col gap-5">
         <div className="flex flex-col py-1" >
           <label className=" text-gray-200 capitalize py-1 font-medium text-lg" htmlFor="">Name</label>

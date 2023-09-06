@@ -40,15 +40,17 @@ const Tracks = () => {
   ]
   return (
     <div className="w-full px-5  flex flex-col items-center py-5">
-      <h2 className="font-bold text-3xl py-7 ">Tracks</h2>
-      <div className="p-4 flex gap-11 w-full flex-wrap items-center justify-center">
+      <h2 className="font-bold text-3xl py-7 xl:py-10  ">Tracks</h2>
+      <div className="p-4 flex gap-11 w-full flex-wrap items-center justify-center xl:gap-40 2xl:gap-14  ">
         {
           tracks.map(({ id, title, desc, img }) => (
-            <div key={id} className="  w-[350px] relative liner-border p-[2px] rounded-[15px]">
-              <div className=" h-[500px] px-4 py-4 bg-tertiary rounded-[15px] shadow-card flex flex-col  gap-5">
+            <div key={id} className="  w-[350px]  relative liner-border p-[3px] rounded-[15px] md:w-[450px] xl:w-[450px] 2xl:w-[400px] ">
+              <div className="min-h-[500px] px-7  py-10 bg-tertiary rounded-[15px] shadow-card flex flex-col items-center justify-ene gap-5 2xl:h-[600px] 2xl:gap-24">
                 <img src={img} alt="vite" className="w-[300px] h-[200px]" />
-                <h3 className="text-2xl font-bold">{title}</h3>
-                <p>{desc} </p>  
+                <div>
+                  <h3 className="text-2xl font-bold">{title}</h3>
+                  <p>{desc} </p>
+                </div>
               </div>
             </div>
           ))

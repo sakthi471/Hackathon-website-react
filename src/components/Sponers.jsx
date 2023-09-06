@@ -39,11 +39,11 @@ const Sponers = () => {
 
   return (
     <div className='w-full flex flex-col items-center py-20 '>
-         <h1 className='text-2xl font-bold py-5'>Sponers</h1>
-       <div className='flex flex-wrap p-6 gap-20 w-[90%] justify-center items-center'>
+         <h1 className='text-2xl font-bold py-5 lg:text-3xl'>Sponers</h1>
+       <div className='flex flex-wrap p-6 gap-20 w-[90%] justify-center items-center lg:w-full 2xl:w-[80%]'>
            {
             sponers.map(({id,img})=>(
-                <div key={id} className='w-[500px] p-8  min-h-[200px]  flex items-center rounded-md justify-center bg-blue-900 ' > 
+                <div key={id} className='w-[500px] lg:w-[400px] p-8  min-h-[200px]  flex items-center rounded-md justify-center bg-blue-900 ' > 
                 <img src={img} alt="" />
               </div>
             ))
