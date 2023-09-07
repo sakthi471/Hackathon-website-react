@@ -11,13 +11,7 @@ import RegisterRes from "./RegisterRes";
 const Register = () => {
   let [page, setPage] = useState(0);
   const [status,setStatus]=useState(null)
-  const [message,setMessage]=useState("")
-
   const limit = 4;
-  
-
-
-
 
 
   const [input, setInput] = useState({
@@ -34,13 +28,12 @@ const Register = () => {
     team_member_2_email: "",
     team_member_2_register_number: "",
 
+    
     team_member_3_name: "",
     team_member_3_department: "",
     team_member_3_phone: "",
     team_member_3_email: "",
     team_member_3_register_number: "",
-
-
   })
 
   const inputHandler = (e) => {
@@ -50,7 +43,7 @@ const Register = () => {
 
   const hadleSubmit = async (e) => {
     try {
-      e.preventDefault()
+      e.preventDefault();
       const res = await axios.post("https://web-it-like-spider.onrender.com/hackathon/register/", input)
       console.log(res.status,res.data);
       setStatus(res.status)
@@ -84,15 +77,15 @@ const Register = () => {
 
   return (
     <div className="w-full h-screen  flex flex-col gap-5   justify-center items-center ">
-      <h1 className=" font-semibold text-xl">Register</h1>
+      <h1 className=" font-semibold text-xl lg:text-3xl">Register</h1>
       <div className="w-[95%]  formglass flex flex-col items-center rounded-md gap-7 py-7 justify-around ">
         {
           page !==3 ? (  <div className="flex  items-center gap-6 text-base font-semibold">
-          <p>Memeber</p>
-          <div className=" w-10 h-10 rounded-[50px] flex items-center justify-center font-bold text-white bg-primary">
+          <p className=" lg:text-xl">Memeber</p>
+          <div className=" w-10 h-10 rounded-full flex items-center justify-center lg:text-xl font-bold text-white border-purple-500 bg-[#8008AB] shadow-lg shadow-purple-500">
             {page + 1}
           </div>
-          <div>Details</div>
+          <div  className="lg:text-xl">Details</div>
         </div>):null
         }
         {
@@ -100,13 +93,13 @@ const Register = () => {
         }
          {
           page!==3 ? ( <div className="w-[90%] flex justify-between items-center">
-          <button style={page === 0 ? { visibility: 'hidden' } : {}} className=" flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass" onClick={() => page <= 0 ? setPage(0) : setPage(page -= 1)}><AiOutlineArrowLeft /> Back  </button >
+          <button style={page === 0 ? { visibility: 'hidden' } : {}} className=" flex items-center gap-2 justify-center font-bold px-3 py-1  w-[110px] btnGlass " onClick={() => page <= 0 ? setPage(0) : setPage(page -= 1)}><AiOutlineArrowLeft/> Back  </button >
 
           {
             page === 2 ? (<button onClick={(e) => {
               hadleSubmit(e); page >= 3 ? setPage(limit - 1) : setPage(page += 1)
-            }} className="flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px]  btnGlass " >Submit</button>) : (
-              <button className="flex items-center gap-4 justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass " onClick={() => page >= 3 ? setPage(limit - 1) : setPage(page += 1)} >Next <AiOutlineArrowRight /> </button>)
+            }} className="flex items-center gap-4 justify-center font-bold px-3 py-1 w-[110px]  btnGlass " >Submit</button>) : (
+              <button className="flex items-center gap-2  justify-center font-bold px-3 py-1  rounded-md w-[110px] btnGlass " onClick={() => page >= 3 ? setPage(limit - 1) : setPage(page += 1)} >Next <AiOutlineArrowRight /> </button>)
           }
 
 

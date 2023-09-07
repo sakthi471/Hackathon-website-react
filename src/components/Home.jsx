@@ -13,15 +13,16 @@ const Home = () => {
     return (
         <div className=" w-full bg-primary  bg-hero-pattern bg-no-repeat bg-cover bg-fixed ">
             <div className=" w-full ">
-             <Hero />
+                <Navbar />
+                <Hero />
             </div>
             <About />
-            <Hackathon/>
+            <Hackathon />
             <Tracks />
             <Statistics />
             <Timeline />
             <Sponers />
-            <Contact/>
+            <Contact />
         </div>
     )
 }

@@ -19,7 +19,7 @@ const Hero = () => {
           <h2 className="text-4xl font-bold lg:text-5xl ">
             <span className=" text-violet-500">TCE-MDU</span> Hackathon
           </h2>
- 
+    
           <div className="flex flex-col items-start gap-2">
             <p> ⚪ Prizes worth ₹ 100,000+</p>
             <p>

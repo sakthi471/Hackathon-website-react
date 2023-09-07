@@ -45,8 +45,16 @@
   initial-value: 0turn;
 }
 
-
+.groupGradinet{
+  background: linear-gradient(90deg, #A624EF, #7766FA);
  
+}
+
+
+ .hackathonShadow{
+  box-shadow: 5px 8px 50px 2px rgba(240, 5, 225, 0.37);
+
+ }
 .footerGradient {
   background: rgba(21, 16, 48, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -78,7 +86,7 @@
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .formInputGlass:focus {
@@ -101,13 +109,19 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .btnGlass {
-  background: rgba(124, 58, 237, 0.5);
+  background: rgba(204, 0, 255, 0.6);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px; 
+  transition: 200ms;
+}
+.btnGlass:hover{
+  background: rgba(206, 11, 255, 1);
+  border: 2px solid rgb(212, 212, 212) ;
+ 
 }
 .pink-gra {
   background: linear-gradient(to top, #ec008c, #fc6767);

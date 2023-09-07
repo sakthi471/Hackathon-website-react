@@ -39,16 +39,18 @@ const Tracks = () => {
     },
   ]
   return (
-    <div name="tracks" className="w-full px-5  flex flex-col items-center py-5">
+    <div name="tracks" className="w-full px-5  flex flex-col items-center py-5 2xl:h-screen 2xl:justify-center">
       <h2 className="font-bold text-3xl py-7 xl:py-10  ">Tracks</h2>
-      <div className="p-4 flex gap-11 w-full flex-wrap items-center justify-center xl:gap-40 2xl:gap-14  ">
+      <div className="p-4 flex gap-11 w-full flex-wrap items-center justify-center xl:gap-40 2xl:gap-14 2xl:h-[600px] ">
         {
           tracks.map(({ id, title, desc, img }) => (
-            <div key={id} className="  w-[350px]  relative liner-border p-[3px] rounded-[15px] md:w-[450px] xl:w-[450px] 2xl:w-[400px] ">
-              <div className="min-h-[500px] px-7  py-10 bg-tertiary rounded-[15px] shadow-card flex flex-col items-center justify-ene gap-5 2xl:h-[600px] 2xl:gap-24">
-                <img src={img} alt="vite" className="w-[300px] h-[200px]" />
-                <div>
+            <div key={id} className="  w-[350px] 2xl:h-[330px] 2xl:hover:h-[550px] duration-700 overflow-hidden relative liner-border p-[3px] rounded-[15px] md:w-[450px] xl:w-[450px] 2xl:w-[400px] ">
+              <div className="min-h-[100px] px-7  py-10 bg-tertiary rounded-[15px] shadow-card flex flex-col items-center justify-ene gap-5 2xl:h-[100%] 2xl:gap-9 lg:h-[550px]">
+                <div className=" flex flex-col items-center gap-7">
+                  <img src={img} alt="vite" className="w-[300px] h-[200px]" />
                   <h3 className="text-2xl font-bold">{title}</h3>
+                </div>
+                <div  >
                   <p>{desc} </p>
                 </div>
               </div>

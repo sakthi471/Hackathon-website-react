@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import vite from '/vite.svg'
 import { HiMenuAlt3 } from 'react-icons/hi'
 import { FaTimes } from 'react-icons/fa'
-import { Link, animateScroll as scroll } from "react-scroll";
+import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const Nav = () => {
 
   const [nav, setNav] = useState(false)
 
@@ -12,53 +12,53 @@ const Navbar = () => {
     {
       id: 1,
       title: 'home',
-      url: 'home'
-    },
-    {
-      id: 2,
-      title: 'about',
-      url: 'about'
-    },
-    {
-      id: 3,
-      title: 'tracks',
-      url: 'tracks'
-    },
-    {
-      id: 4,
-      title: 'price & opportunities',
       url: '/'
     },
+    // {
+    //   id: 2,
+    //   title: 'about',
+    //   url: '/about'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'tracks',
+    //   url: 'tracks'
+    // },
+    // {
+    //   id: 4,
+    //   title: 'price & opportunities',
+    //   url: '/'
+    // },
 
-    {
-      id: 5,
-      title: 'sponsors',
-      url: 'sponsors'
-    },
+    // {
+    //   id: 5,
+    //   title: 'sponsors',
+    //   url: 'sponsors'
+    // },
 
-    {
-      id: 6,
-      title: 'faq',
-      url: 'faq'
-    },
+    // {
+    //   id: 6,
+    //   title: 'faq',
+    //   url: 'faq'
+    // },
 
-    {
-      id: 7,
-      title: 'contact',
-      url: 'contact'
-    },
-    {
-      id: 8,
-      title: 'statistics',
-      url: 'statistics'
-    },
+    // {
+    //   id: 7,
+    //   title: 'contact',
+    //   url: 'contact'
+    // },
+    // {
+    //   id: 8,
+    //   title: 'statistics',
+    //   url: 'statistics'
+    // },
   ]
 
   return (
 
     <nav className='glass w-full flex items-center justify-between p-4 fixed z-20'>
       <div className='font-bold px-2 flex items-center gap-3 text-xl'>
-        <img src={vite} className=' w-7 drop-shadow-[0_15px_15px_rgba(211,44,255,0.5)]' alt="vite logo" />
+        <img src={vite} className=' w-7' alt="vite logo" />
         TCE-MDU
       </div>
       <div className='flex items-center  justify-evenly'>
@@ -67,7 +67,7 @@ const Navbar = () => {
           {
             Navlinks.map(({ id, title, url }) => (
               <li key={id} className=' list-none px-3 py-4 capitalize text-gray-300 cursor-pointer  hover:text-gray-100 hover:font-semibold' >
-                <Link to={url} smooth={true} duration={500} offset={-50} > {title}</Link>
+                <Link to={url}  > {title}</Link>
 
               </li>
 
@@ -85,7 +85,7 @@ const Navbar = () => {
         nav && <div className='w-full flex flex-col h-screen text-xl font-semibold gap-5 py-10 items-center absolute navGlass top-[75px] left-0  '>
           {
             Navlinks.map(({id,title,url}) => (
-              <li key={id}  className=' list-none px-3 py-2 capitalize text-gray-100 cursor-pointer  hoverz:text-gray-100 hover:font-semibold' > <Link onClick={() => setNav(!nav)}  to={url} smooth={true} duration={500} offset={-50} > {title}</Link>
+              <li key={id}  className=' list-none px-3 py-2 capitalize text-gray-100 cursor-pointer  hoverz:text-gray-100 hover:font-semibold' > <Link onClick={() => setNav(!nav)}  to={url} > {title}</Link>
               </li>
             ))
           }
@@ -98,4 +98,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Nav

@@ -59,7 +59,7 @@ const Contact = () => {
               <MdLocationPin className=' font-extrabold text-xl' />
               247, SLC2, Anna Nagar,
               Madurai - 625020</p>
-          </div>
+        </div>
         </div>
     
         <div className='flex flex-col gap-5'>
