@@ -8,6 +8,7 @@ import Timeline from "./Timeline";
 import Sponers from "./Sponers";
 import Contact from './Contact';
 import Hackathon from './Hackathon';
+import Faq from './Faq';
 
 const Home = () => {
     return (
@@ -22,6 +23,8 @@ const Home = () => {
             <Statistics />
             <Timeline />
             <Sponers />
+
+            <Faq />
             <Contact />
         </div>
     )

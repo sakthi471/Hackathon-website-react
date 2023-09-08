@@ -28,10 +28,10 @@ const Hackathon = () => {
 
 
     return (
-        <div className='w-full  flex flex-col items-center py-16 '>
+        <div name="hackathon" className='w-full  flex flex-col items-center py-16 '>
             <p className=' text-2xl  text-white font-bold py-5 2xl:text-3xl '>Hackathon   Details</p>
              { data !==null ? (
-                 <div className=' liner-border w-[93%] min-h-[700px]  h-full rounded-lg p-[2px] xl:w-[80%] 2xl:w-[70%] hackathonShadow'>
+                 <div className=' liner-border w-[93%] min-h-[700px]  h-full rounded-lg p-[2px] xl:w-[80%] 2xl:w-[70%] '>
                  <div className='w-full bg-tertiary min-h-[700px] flex flex-col px-9  rounded-lg py-8 gap-10 lg:gap-16 2xl:gap-14 '>
  
                      <p className=' text-xl  font-bold border-b-[3px] border-blue-600 block text-center w-[210px] lg:mx-auto'> {data.name}</p>
@@ -60,14 +60,14 @@ const Hackathon = () => {
                                  <p className=' font-bold'> {data.rounds[0].round_number} </p>
                                  <p className=' font-bold'>{data.rounds[0].round_date}</p>
                              </div>
-                             <div className='w-[7px] h-[90px] groupGradinet md:rotate-90 lg:h-[175px] 2xl:h-[230px] '>
+                             <div className='w-[7px] h-[90px] groupGradinet md:rotate-90 lg:h-[175px] 2xl:h-[175px] '>
  
                              </div>
                              <div className='w-[150px] h-[150px] groupGradinet rounded-full text-center flex flex-col justify-center items-center'>
                                  <p className=' font-bold'> {data.rounds[1].round_number}</p>
                                  <p className=' font-bold'> {data.rounds[1].round_date}</p>
                              </div>
-                             <div className='w-[7px] h-[90px] groupGradinet md:rotate-90 lg:h-[175px] 2xl:h-[230px]    '>
+                             <div className='w-[7px] h-[90px] groupGradinet md:rotate-90 lg:h-[175px] 2xl:h-[175px]    '>
  
                              </div>
                              <div className='w-[150px] h-[150px] groupGradinet rounded-full text-center flex flex-col justify-center items-center'>
@@ -97,7 +97,7 @@ const Hackathon = () => {
  
                  </div>
              </div>
-             ):( <div className=' w-[80%] rounded-sm flex items-center justify-center border-[1px] px-6 py-10 '> <p  className=' text-2xl font-bold '>Network error plese try again </p></div> ) }
+             ):( <div className=' w-[80%]  flex items-center hackathonMes justify-center px-6 py-10 '> <p  className=' text-2xl font-bold '>Network error plese try again </p></div> ) }
         </div>
     )
 }

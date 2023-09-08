@@ -43,7 +43,7 @@ const Sponers = () => {
        <div className='flex flex-wrap p-6 gap-20 w-[90%] justify-center items-center lg:w-full 2xl:w-[80%]'>
            {
             sponers.map(({id,img})=>(
-                <div key={id} className='w-[500px] lg:w-[400px] p-8  min-h-[200px]  flex items-center rounded-md justify-center bg-blue-900 ' > 
+                <div key={id} className='w-[500px] lg:w-[400px] p-8  min-h-[200px]  flex items-center rounded-md justify-center spoonersGradinet ' > 
                 <img src={img} alt="" />
               </div>
             ))

@@ -12,31 +12,40 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
- 
-.drop-bg-blue-500{
-      filter: drop-shadow(1px 3px 10px rgba(245, 249, 251, 0.5) );
-    
-      
-}
 
+.drop-bg-blue-500 {
+  filter: drop-shadow(1px 3px 10px rgba(245, 249, 251, 0.5));
+}
 
 .box {
   --border-size: 3px;
   --border-angle: 0turn;
-  background-image: conic-gradient(from var(--border-angle), rgb(124 58 237), rgb(124 58 237) 50%, rgb(124 58 237)), conic-gradient(from var(--border-angle), transparent 20%, #078ff1 , rgb(248, 172, 8));
-  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      rgb(124 58 237),
+      rgb(124 58 237) 50%,
+      rgb(124 58 237)
+    ),
+    conic-gradient(
+      from var(--border-angle),
+      transparent 20%,
+      #078ff1,
+      rgb(244, 242, 238)
+    );
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
   background-position: center center;
   background-repeat: no-repeat;
   animation: bg-spin 6s linear infinite;
 }
 @keyframes bg-spin {
-  to {  
+  to {
     --border-angle: 1turn;
- }
+  }
 }
 .box:hover {
   animation-play-state: paused;
-  
 }
 
 @property --border-angle {
@@ -44,17 +53,50 @@
   inherits: true;
   initial-value: 0turn;
 }
-
-.groupGradinet{
-  background: linear-gradient(90deg, #A624EF, #7766FA);
- 
+.faqGlass {
+  background: rgba(21, 16, 48, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+}
+.fagTitle{
+    transition: 400ms;
+}
+.fagTitle:hover{
+  background: rgba(205, 6, 235, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+}
+.navLinkGlass {
+  transition: 700ms;
+}
+.navLinkGlass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.groupGradinet {
+  background: linear-gradient(90deg, #a624ef, #7766fa);
+}
 
- .hackathonShadow{
+.hackathonMes {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hackathonShadow {
   box-shadow: 5px 8px 50px 2px rgba(240, 5, 225, 0.37);
-
- }
+}
 .footerGradient {
   background: rgba(21, 16, 48, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -72,7 +114,12 @@
   background: rgba(21, 16, 48, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  transition: 700ms;
 }
+  .tracksShadow:hover{
+    box-shadow: 5px 8px 20px 0px rgba(244, 13, 232, 0.5);
+
+  }
 
 .formglass {
   background: rgba(21, 16, 48, 0.35);
@@ -101,6 +148,22 @@
   border: 1px solid rgba(123, 2, 81, 0.3);
 }
 
+.spoonersGradinet{
+      background: #667eea;
+      background: -webkit-linear-gradient(to right, rgba(102,126,234,0.5), rgba(118,75,162,0.5));
+      background: linear-gradient(to right, rgba(102,126,234,0.5), rgba(241, 234, 247, 0.5));
+      transition: 400ms;
+    
+  
+}
+
+.spoonersGradinet:hover{
+  box-shadow: 2px 5px 10px 0px rgba(203, 204, 205, 0.9); 
+  background: linear-gradient(to right, rgba(102,126,234,.7), rgba(241, 234, 247, 0.7));
+   transform:translateY(-9px);
+   
+}
+
 .statisticsGlass {
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -115,13 +178,12 @@
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 6px; 
+  border-radius: 6px;
   transition: 200ms;
 }
-.btnGlass:hover{
+.btnGlass:hover {
   background: rgba(206, 11, 255, 1);
-  border: 2px solid rgb(212, 212, 212) ;
- 
+  border: 2px solid rgb(212, 212, 212);
 }
 .pink-gra {
   background: linear-gradient(to top, #ec008c, #fc6767);
@@ -134,8 +196,9 @@
 }
 
 .stastic-gradinet {
-  background: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+  background-image: linear-gradient(45deg, #3b41c5 0%, #a981bb 49%, #fc985e 100%);
 }
+
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */

@@ -67,7 +67,7 @@ const Navbar = () => {
           {
             Navlinks.map(({ id, title, url }) => (
               <li key={id} className=' list-none px-3 py-4 capitalize text-gray-300 cursor-pointer  hover:text-gray-100 hover:font-semibold' >
-                <Link to={url} smooth={true} duration={500} offset={-50} > {title}</Link>
+                <Link to={url} smooth={true} duration={500} offset={100} > {title}</Link>
 
               </li>
 

@@ -54,9 +54,9 @@ const Contact = () => {
         <div className='flex flex-col gap-5 '>
           <p className=' text-xl capitalize font-bold border-blue-400 border-b-2 w-[150px]'>contact us</p>
           <div className='flex flex-col gap-2' > 
-            <p className='flex  items-center gap-4' > <BiSolidPhoneCall className=' font-extrabold text-xl' /> 994418940</p>
+            <p className='flex  items-center gap-4' > <BiSolidPhoneCall className=' font-extrabold text-2xl' /> 994418940</p>
             <p className='flex items-center gap-4'>
-              <MdLocationPin className=' font-extrabold text-xl' />
+              <MdLocationPin className=' font-extrabold text-2xl' />
               247, SLC2, Anna Nagar,
               Madurai - 625020</p>
         </div>

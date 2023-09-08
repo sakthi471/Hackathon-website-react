@@ -21,12 +21,12 @@ const RegisterRes = ({ status, page, setPage }) => {
          if(status===200){
               setTimeout(() => {
                   navigate('/')
-              }, 2000);
+              }, 3000);
          }
          else{
              setTimeout(() => {
                   setPage(0)
-             }, 2000);
+             }, 3000);
          }
      }
      

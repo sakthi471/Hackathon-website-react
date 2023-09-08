@@ -31,7 +31,7 @@ const Statistics = () => {
       <p className="text-3xl font-bold py-7 "> Statistics</p>
          <div className="flex gap-10 flex-wrap w-[100%] justify-center  items-center md:py-8 md:gap-16 xl:w-[90%] 2xl:w-[60%] 2xl:gap-24 ">
          {statistic.map(({ id, title, value }) => (
-          <div key={id} className=" statisticsGlass rounded-md p-[1px]">
+          <div key={id} className="  rounded-md p-[1px]">
              <div   key ={id}className=" w-[330px] h-[250px] xl:w-[400px] xl:h-[300px] stastic-gradinet rounded-md flex flex-col items-center  justify-center">
           <h1 className="font-bold text-2xl"> {title}</h1>
           <h3 className="font-bold text-3xl">
