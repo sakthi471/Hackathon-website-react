@@ -73,6 +73,37 @@
 .box:hover {
   animation-play-state: paused;
 }
+.box1{
+  --border-size: 3px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      rgb(5, 3, 65),
+      rgb(28, 5, 67) 50%,
+      rgb(27, 6, 63)
+    ),
+    conic-gradient(
+      from var(--border-angle),
+      transparent 20%,
+      #078ff1,
+      rgb(244, 242, 238)
+    );
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 9s linear infinite;
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+.box1:hover{
+  animation-play-state: paused;
+
+}
 
 @property --border-angle {
   syntax: "<angle>";
@@ -142,7 +173,7 @@
 }
 
  .tracksShadow{
-  transition: 700ms !important;
+    transition: 700ms !important;
  }
   .tracksShadow:hover{
     box-shadow: 5px 8px 20px 0px rgba(244, 13, 232, 0.5);

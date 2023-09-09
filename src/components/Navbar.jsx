@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className=' hidden lg:flex'>
           {
             Navlinks.map(({ id, title, url }) => (
-              <li key={id} className=' list-none px-3 py-4 capitalize text-gray-300 cursor-pointer  hover:text-gray-100 hover:font-semibold' >
+              <li key={id} className='hover:border-b-[2px]   border-blue-400 list-none px-3 py-4 capitalize text-gray-300 cursor-pointer   hover:text-gray-100 hover:font-semibold' >
                 <Link to={url} smooth={true} duration={500} offset={100} > {title}</Link>
 
               </li>

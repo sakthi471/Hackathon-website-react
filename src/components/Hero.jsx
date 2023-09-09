@@ -36,7 +36,7 @@ const Hero = () => {
           <div className=" 2xl: flex 2xl:gap-6 flex-col  gap-6 md:flex-row ">
             <Link to='/register' ><button data-aos="fade-left" data-aos-duration="1300" className="box px-8 py-2  bg-violet-600 rounded-lg font-bold w-[320px]  xl:text-xl xl:py-3" >Register</button>
             </Link>
-            <ScrollLink to="hackathon" smooth={true} duration={500} offset={-50} >   <button data-aos="fade-left" data-aos-duration="2000" className="box px-8 py-2 rounded-lg bg-purple-500 font-bold w-[320px] xl:text-xl xl:py-3 2xl:w-[250px] md:w-[200px]" >Hackathon</button>
+            <ScrollLink to="hackathon" smooth={true} duration={500} offset={-50} >   <button data-aos="fade-left" data-aos-duration="2000" className=" px-8 py-2 rounded-lg box1 font-bold w-[320px] xl:text-xl xl:py-3 2xl:w-[250px] md:w-[200px]" >Hackathon</button>
             </ScrollLink>
 
           </div>

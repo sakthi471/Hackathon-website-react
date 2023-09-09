@@ -38,8 +38,8 @@ const Faq = () => {
     }
 
     return (
-        <div className='w-full flex  flex-col  items-center gap-9 py-32 '>
-        <p className=' text-2xl font-bold  border-b-2 border-blue-400 py-2'> Frequently Asked Questions
+        <div name="faq" className='w-full flex  flex-col  items-center gap-9 py-32 '>
+        <p className=' text-2xl font-bold   py-2'> Frequently Asked Questions
             </p>
             <div className=' w-full flex flex-col gap-3 md:w-[80%] lg:w-[60%]'>
 

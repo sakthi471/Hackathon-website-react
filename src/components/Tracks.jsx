@@ -1,9 +1,8 @@
 import React from "react";
-import vite from "/vite.svg";
-import blockchain from '/tracks_blockchain_vector.svg'
-import electronics from '/tracks_digitalelectrovics_vector.svg'
-import dev from '/Tracks_LaptopVector.svg'
-import aiMl from '/tracks_ML_vector.svg'
+import blockchain from '../assets/tracks/tracks_blockchain_vector.svg'
+import electronics from '../assets/tracks/tracks_digitalelectrovics_vector.svg'
+import dev from '../assets/tracks/Tracks_LaptopVector.svg'
+import aiMl from '../assets/tracks/tracks_ML_vector.svg'
 
 const Tracks = () => {
 

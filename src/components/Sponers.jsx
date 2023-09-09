@@ -1,10 +1,10 @@
 import React from 'react'
-import qualcomm from '/sponers/qualcomm.svg'
-import bharatX from '/sponers/bharatX.svg'
-import bluelearn from '/sponers/bluelearn.svg'
-import gradvine from '/sponers/gradvine.svg'
-import postman from '/sponers/qualcomm.svg'
-import unstop from '/sponers/unstop.png'
+import qualcomm from '../assets/sponers/qualcomm.svg'
+import bharatX from '../assets/sponers/bharatX.svg'
+import bluelearn from '../assets/sponers/bluelearn.svg'
+import gradvine from '../assets/sponers/gradvine.svg'
+import postman from '../assets/sponers/qualcomm.svg'
+import unstop from '../assets/sponers/unstop.png'
 
 
 
@@ -38,7 +38,7 @@ const Sponers = () => {
   ]
 
   return (
-    <div name="sponsors" className='w-full flex flex-col items-center py-20 xl:h-screen '>
+    <div name="sponsors" className='w-full flex flex-col items-center justify-center py-20 xl:h-screen '>
          <h1 className='text-2xl font-bold py-5 lg:text-3xl'>Sponers</h1>
        <div className='flex flex-wrap p-6 gap-20 w-[90%] justify-center items-center lg:w-full 2xl:w-[80%]'>
            {

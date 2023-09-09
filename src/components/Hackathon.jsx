@@ -33,7 +33,7 @@ const Hackathon = () => {
 
     return (
         <div name="hackathon" data-aos="fade-right" data-aos-duration="2000"  className='w-full  flex flex-col items-center py-16 '>
-            <p  className=' text-2xl  text-white font-bold py-5 2xl:text-3xl'>Hackathon   Details</p>
+            <p  className=' text-2xl  text-white font-bold py-5 2xl:text-3xl 2xl:py-10 '>Hackathon   Details</p>
             {data !== null ? (
 
                 <div className='gradient-border hackathonShadow w-[93%] min-h-[700px]  h-full rounded-lg p-[2px] xl:w-[80%] 2xl:w-[70%] '>
