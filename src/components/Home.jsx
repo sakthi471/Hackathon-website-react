@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
@@ -9,8 +9,16 @@ import Sponers from "./Sponers";
 import Contact from './Contact';
 import Hackathon from './Hackathon';
 import Faq from './Faq';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 const Home = () => {
+    useEffect( ()=>{
+        Aos.init();  
+      
+    },[])
+
     return (
         <div className=" w-full bg-primary  bg-hero-pattern bg-no-repeat bg-cover bg-fixed ">
             <div className=" w-full ">
