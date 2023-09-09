@@ -200,11 +200,19 @@
 }
 .formSubmissionGlass {
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(123, 2, 81, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(3, 188, 65, 0.3);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 1px solid rgba(123, 2, 81, 0.3);
+  border: 1px solid rgba(7, 225, 65, 0.3);
+}
+.formSubmissionGlass-1{
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(218, 4, 86, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(240, 6, 34, 0.3);
 }
 
 .spoonersGradinet{

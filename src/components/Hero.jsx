@@ -14,14 +14,14 @@ const Hero = () => {
    
   return (
     <div name="home" className="  w-full  flex flex-col   items-center justify-center xl:flex-row  xl:h-screen xl:px-14 ">
-      <div className=" flex w-full items-center justify-center h-[500px] pt-28   lg:gap-6 xl:pt-0">
+      <div className=" flex w-full items-center justify-center h-[500px] pt-28    lg:gap-6 xl:pt-0">
         <div data-aos="fade-right" data-aos-duration="900"  className="flex flex-col items-center px-3   h-[310px]"  >
           <div className="w-4 rounded-full h-4 bg-violet-600 z-10 "></div>
           <div  className=" w-1 h-[350px] violet-gradient rounded-tr-full  rounded-tl-full "></div>
         </div>
 
-        <div className="px-4 py-7 flex flex-col  jutstify-center  gap-8 ">
-          <p className="xl:text-xl" data-aos="fade-left" data-aos-duration="1000" >NIT-K, NIT-W & NIT-T welcomes you to </p>
+        <div className="px-4 py-7 flex flex-col  jutstify-center items-center  gap-8 ">
+          <p className="xl:text-xl " data-aos="fade-left" data-aos-duration="1000" >TCE welcomes you to </p>
           <h2 data-aos="fade-left" data-aos-duration="1100" className="text-4xl font-bold lg:text-5xl ">
             <span   className=" text-violet-500">TCE-MDU</span> Hackathon
           </h2>
@@ -34,9 +34,9 @@ const Hero = () => {
           </div>
 
           <div className=" 2xl: flex 2xl:gap-6 flex-col  gap-6 md:flex-row ">
-            <Link to='/register' ><button data-aos="fade-left" data-aos-duration="1300" className="box px-8 py-2  bg-violet-600 rounded-lg font-bold w-[320px]  xl:text-xl xl:py-3" >Register</button>
+            <Link to='/register' ><button data-aos="fade-left" data-aos-duration="1300" className="box px-8 py-2  bg-violet-600 rounded-lg font-bold w-[270px]  xl:text-xl xl:py-3" >Register</button>
             </Link>
-            <ScrollLink to="hackathon" smooth={true} duration={500} offset={-50} >   <button data-aos="fade-left" data-aos-duration="2000" className=" px-8 py-2 rounded-lg box1 font-bold w-[320px] xl:text-xl xl:py-3 2xl:w-[250px] md:w-[200px]" >Hackathon</button>
+            <ScrollLink to="hackathon" smooth={true} duration={500} offset={-50} >   <button data-aos="fade-left" data-aos-duration="2000" className=" px-8 py-2 rounded-lg box1 font-bold w-[270px] xl:text-xl xl:py-3 2xl:w-[320px] md:w-[200px]" >Hackathon</button>
             </ScrollLink>
 
           </div>

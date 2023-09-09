@@ -24,31 +24,26 @@ const Navbar = () => {
       title: 'tracks',
       url: 'tracks'
     },
+ 
     {
       id: 4,
-      title: 'price & opportunities',
-      url: '/'
-    },
-
-    {
-      id: 5,
       title: 'sponsors',
       url: 'sponsors'
     },
 
     {
-      id: 6,
-      title: 'faq',
+      id: 5,
+      title: 'FAQ',
       url: 'faq'
     },
 
     {
-      id: 7,
+      id: 6,
       title: 'contact',
       url: 'contact'
     },
     {
-      id: 8,
+      id: 7,
       title: 'statistics',
       url: 'statistics'
     },

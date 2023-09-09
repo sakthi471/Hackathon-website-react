@@ -15,12 +15,17 @@ import 'aos/dist/aos.css'
 
 const Home = () => {
     useEffect( ()=>{
-        Aos.init();  
+        Aos.init({
+            disable: function() {
+              var maxWidth = 435;
+              return window.innerWidth < maxWidth;
+            }
+          });
       
     },[])
 
     return (
-        <div className=" w-full bg-primary  bg-hero-pattern bg-no-repeat bg-cover bg-fixed ">
+        <div className=" overflow-hidden w-full bg-primary  bg-hero-pattern bg-no-repeat bg-cover bg-fixed ">
             <div className=" w-full ">
                 <Navbar />
                 <Hero />

@@ -7,14 +7,14 @@ const Faq = () => {
     const faqs = [
         {
             id: 1,
-            title: "What is the Tri-NIT hackathon?",
-            ans: "Tri-NIT Hackathon is a 36-hour long weekend event where thousands of students from all over India collaborate to work on fun problem statements based on software and electronics domains to give an obliging solution. "
+            title: "What is the TCE-MDU hackathon?",
+            ans: "TCE-MDU Hackathon is a 36-hour long weekend event where thousands of students from all over India collaborate to work on fun problem statements based on software and electronics domains to give an obliging solution. "
         },
         {
             id: 2,
             title: "Who can participate?",
-            ans: "TRI-NIT Hackathon is open to all undergraduate students from all colleges across India."
-        },
+            ans: "TCE-MDU Hackathon is open to all undergraduate students from all colleges across India."
+        },  
         {
             id: 3,
             title: "How much is the participation fee?",

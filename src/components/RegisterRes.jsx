@@ -54,10 +54,10 @@ const RegisterRes = ({ status, page, setPage }) => {
                      {   
                        
                         status === 200 ?  ( <div className='flex items-center justify-center px-4 py-7  formSubmissionGlass '>
-                            <p className=' text-2xl font-bold'>Thank You For Registering the Event</p>
+                            <p className=' text-2xl font-bold text-center'>Thank you for your Successful Registration </p>
                             
                           
-                        </div>) : (<div className='flex items-center justify-center px-4 py-7  formSubmissionGlass '>
+                        </div>) : (<div className='flex items-center justify-center px-4 py-7  formSubmissionGlass-1 '>
                             <p className=' text-2xl font-bold'>Opps Something Went Wrong</p>
                            
                         </div>)

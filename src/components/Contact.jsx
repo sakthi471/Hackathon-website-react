@@ -57,7 +57,7 @@ const Contact = () => {
             <p className='flex  items-center gap-4' > <BiSolidPhoneCall className=' font-extrabold text-2xl' /> 994418940</p>
             <p className='flex items-center gap-4'>
               <MdLocationPin className=' font-extrabold text-2xl' />
-              247, SLC2, Anna Nagar,
+              247,  Thiruparankundram,
               Madurai - 625020</p>
         </div>
         </div>
