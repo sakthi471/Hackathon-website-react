@@ -78,9 +78,9 @@
   --border-angle: 0turn;
   background-image: conic-gradient(
       from var(--border-angle),
-      rgb(5, 3, 65),
-      rgb(28, 5, 67) 50%,
-      rgb(27, 6, 63)
+      rgb(197, 15, 225),    
+      rgb(197, 15, 225) 50%,
+      rgb(197, 15, 225)
     ),
     conic-gradient(
       from var(--border-angle),
