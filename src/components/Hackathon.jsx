@@ -16,7 +16,7 @@ const Hackathon = () => {
                 const res = await axios.get('https://web-it-like-spider.onrender.com/hackathon/home/')
                 console.log(`from get request ${res.status}`);
                 setData(res.data)
-
+                
 
             }
 
@@ -51,7 +51,7 @@ const Hackathon = () => {
                             </div>
                             <div>
                                 <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800" className=' capitalize text-lg  font-medium'>  contact number: <span className='text-base  text-gray-200 font-medium '>{data.contact_number}</span> </p>
-                                <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" className=' capitalize text-lg  font-medium'> Gamil: <span className='text-base text-gray-200 font-medium lowercase'>msakthi@student.tce.edu</span> </p>
+                                <p data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" className='  capitalize text-lg  font-medium'> Gamil: <span className='text-base text-gray-200 font-medium lowercase'>msakthi@student.tce.edu</span> </p>
                             </div>
 
                         </div>
@@ -102,7 +102,7 @@ const Hackathon = () => {
 
                     </div>
                 </div>
-            ) : (<div className=' w-[80%]  flex items-center hackathonMes justify-center px-6 py-10 '> <p className=' text-2xl font-bold '>Network error plese try again </p></div>)}
+            ) : (<div className=' w-[80%]  flex items-center hackathonMes justify-center px-6 py-10 '> <p className=' text-2xl font-bold '>Network error please try again</p></div>)}
         </div>
     )
 }
